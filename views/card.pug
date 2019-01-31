@@ -6,10 +6,10 @@ block card
       .card-header
       h1.card-title= side
       #content
-        h2= hint
-        if hint
-          p.hint  
-            i= hint
+        h2
+         if hint
+           p.hint  
+             i= hint
       .card-flip-wrap
         a(href=`${id}?side=${sideToShow}`)
           img.card-flip(src='/static/img/flip.svg')
