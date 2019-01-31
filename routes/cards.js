@@ -8,7 +8,7 @@ const { cards } = data;
 router.get('/', ( req, res ) => {
   const numberOfCards = cards.length;
   const flashcardId = Math.floor( Math.random() * numberOfCards );
-  res.redirect(`/cards/${flashcardId}` )
+  res.redirect(`/cards/${flashcardId}?side=question` )
 });
 
 router.get('/:id', (req, res) => {
@@ -22,7 +22,7 @@ router.get('/:id', (req, res) => {
   const text = cards[id][side];
   const { hint } = cards[id];
 
-  const templateData = { id, text, name };
+  const templateData = { id, text, name, side };
 
   if(side === 'question') {
     templateData.hint = hint;
