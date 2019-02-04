@@ -53,6 +53,10 @@ input {
 
 
 /* Buttons */
+.buttonA {
+  text-align: center;
+
+}
 .button-primary-small {
   margin-top: 50px;
   background-color: #fff;
